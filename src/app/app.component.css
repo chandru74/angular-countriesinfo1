@@ -1,0 +1,25 @@
+#countryList{
+  padding: 2em;
+  border-bottom: 1px solid grey;
+}
+img{
+  width:35%;
+  height: 30%;
+}
+.searchBox,.sortBox{
+  margin: 50px;
+  width: 200px;
+  border-radius: 4px;
+}
+
+
+.header{
+  text-align: center;
+  color: blue;
+}
+
+.body{
+  align-content: center;
+  margin: 10px;
+}
+

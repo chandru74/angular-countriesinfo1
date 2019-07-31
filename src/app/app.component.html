@@ -1,0 +1,64 @@
+<div class="body">
+  <div>
+    <h1 class="header">List of Countries</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6" >
+      <select [(ngModel)]="sortKey" class="sortBox" >
+        <option value="name">Name</option>
+        <option value="population">Population</option>
+        <option value="area">Area</option>
+      </select>
+    </div>
+    <div class="col-sm-6" >
+      <input type="search" [(ngModel)]="searchText" placeholder="search" class="searchBox">
+    </div>
+  </div>
+
+
+  <div class="row" *ngFor="let c of countries|search:searchText|sort:sortKey" id="countryList">
+    <div class="col-sm-4" id="countryDetails">
+      <img src="{{c.flag}}">
+    </div>
+    <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-6">
+        Name:
+      </div>
+      <div class="col-sm-6">
+        <b>{{c.name}}</b>
+      </div>
+      <div class="col-sm-6">
+        Capital:
+      </div>
+      <div class="col-sm-6">
+        <b>{{c.capital||"-"}}</b>
+      </div>
+
+      <div class="col-sm-6">
+        Population:
+      </div>
+      <div class="col-sm-6">
+        <b> {{c.population||"-"}}</b>
+      </div>
+
+      <div class="col-sm-6">
+        Language:
+      </div>
+      <div class="col-sm-6">
+        <b>{{c.languages[0].name}}</b>
+      </div>
+
+      <div class="col-sm-6">
+        Area:
+      </div>
+      <div class="col-sm-6">
+        <b>{{c.area||"-"}} sqkm</b>
+      </div>
+
+    </div>
+    
+  </div>
+
+</div>
