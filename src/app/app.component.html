@@ -4,20 +4,27 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-6" >
+    <div class="col-sm-4" >
       <select [(ngModel)]="sortKey" class="sortBox" >
         <option value="name">Name</option>
         <option value="population">Population</option>
         <option value="area">Area</option>
       </select>
     </div>
-    <div class="col-sm-6" >
+    <div class="col-sm-4">
+      <select [(ngModel)]="sortType" class="sortBox" >
+        <option value="asc">ASC</option>
+         <option value="desc">DESC</option>
+      </select>
+    </div>
+  
+    <div class="col-sm-4" >
       <input type="search" [(ngModel)]="searchText" placeholder="search" class="searchBox">
     </div>
   </div>
 
 
-  <div class="row" *ngFor="let c of countries|search:searchText|sort:sortKey" id="countryList">
+  <div class="row" *ngFor="let c of countries|search:searchText|sort:sortKey:sortType" id="countryList">
     <div class="col-sm-4" id="countryDetails">
       <img src="{{c.flag}}">
     </div>

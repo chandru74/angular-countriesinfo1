@@ -10,6 +10,7 @@ export class AppComponent  {
   public countries;
   searchText="";
   sortKey="name";
+  sortType='asc';
 
   constructor(private _countriesAPIService:CountriesAPIService){ }
 
