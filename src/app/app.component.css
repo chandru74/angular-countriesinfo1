@@ -1,6 +1,16 @@
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+
+*{
+  box-sizing:border-box;
+}
 #countryList{
   padding: 2em;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  margin:0px;
+}
+
+#countryList:hover{
+  -webkit-transform: scale3d(1.01,1.01,1.01);
 }
 img{
   width:35%;
@@ -15,11 +25,18 @@ img{
 
 .header{
   text-align: center;
-  color: blue;
+  color: rgb(41, 21, 223);
+  border: 1px solid rgb(12, 12, 12);
+   background-color: rgb(194, 196, 189);
 }
 
 .body{
   align-content: center;
   margin: 10px;
+  /* background-color: rgb(194, 196, 189); */
+}
+
+.databody{
+  border: 1px solid black;
 }
 
